@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:500|Poppins"
+      rel="stylesheet"
+    />
+    <!-- Glide.JS stylesheet and stuff -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+    <!-- end -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Trip to Patagonia, Argentina</title>
+  </head>
+
+  <body>
+    <header>
+      <!--NavBar-->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#"><i class="fas fa-tree fa-1x"></i></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!--Main Image and Title-->
+    <section class="main-banner">
+      <div class="header-img" id="home"></div>
+      <div class="title-box">
+        <div class="box-txt">
+          <h1 class="text-center shadow-text">A Trip to Patagonia</h1>
+          <p class="text-center">by</p>
+          <p class="text-center">Luiz Daniel Lima</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="main-space container-fluid">
+      <section>
+        <h4 class="text-center">
+          "It´s human nature to stretch, to go, to see, to understand. <br />
+          Exploration is not a choice really; it´s an imperative."
+        </h4>
+        <p class="text-center">Michael Collins</p>
+      </section>
+
+      <i id="about" class="treeicon fas fa-tree fa-sm"></i>
+
+      <section class="stats">
+        <div class="container">
+          <div class="row">
+            <div class="stat-item col-2">
+              <img src="/dist/assets/map.png" alt="map icon" />
+              <h3>10 days</h3>
+              <p>trekking</p>
+            </div>
+            <div class="stat-item col-2">
+              <img src="/dist/assets/mountain.png" alt="mountain icon" />
+              <h3>91 km</h3>
+              <p>of trails</p>
+            </div>
+            <div class="stat-item col-2">
+              <img src="/dist/assets/backpack.png" alt="backpack icon" />
+              <h3>18 kg</h3>
+              <p>backpack weight</p>
+            </div>
+            <div class="stat-item col-2">
+              <img src="/dist/assets/fishing.png" alt="fishing icon" />
+              <h3>3</h3>
+              <p>trouts fished</p>
+            </div>
+            <div class="stat-item col-2">
+              <img src="/dist/assets/camera.png" alt="camera icon" />
+              <h3>754</h3>
+              <p>pictures taken</p>
+            </div>
+            <div class="stat-item col-2">
+              <img src="/dist/assets/post.png" alt="post icon" />
+              <h3>5</h3>
+              <p>Refugios visited</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="red-text text-center">About the Trip2</h2>
+        <div class="about-trip">
+          <a
+            ><img
+              class="about-img img-fluid"
+              src="https://farm8.staticflickr.com/7373/16365978726_a9757d4b6a_c.jpg"
+              alt="Trekking in the woods, El Bolson"
+          /></a>
+
+          <div class="about-text">
+            <p>
+              In 2014 my friend Eduardo and I decided to travel do Patagonia
+              Argentina and do some trekking around Bariloche (in Parque Nahuel
+              Huapi) and El Bolsón.
+            </p>
+            <p>
+              Although phisically challenging at times, it was well worth it!
+              Beautiful landscapes like no other place in the world. There is
+              something magical about being in contact with nature, away from
+              all the modern world distractions.
+            </p>
+            <p>
+              I hope one day you try it too, you won't regret it! Be sure to
+              prepare yourself physically before travelling, buy some comfort
+              boots, and head on for this unforgettable adventure!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img
+                src="https://farm8.staticflickr.com/7419/16390210191_eb6f6f1988_c.jpg"
+                alt="Wonderful view of the lake and the Refugio Frey"
+              />
+            </li>
+            <li class="glide__slide">
+              <img
+                src="https://farm8.staticflickr.com/7367/15769512364_c9bfde695a_c.jpg"
+                alt="Arriving at Refugio Cajon Del Azul"
+              />
+            </li>
+            <li class="glide__slide">
+              <img
+                src="https://farm9.staticflickr.com/8577/15769507054_574970c51f_c.jpg"
+                alt="Arriving at Refugio Frey"
+              />
+            </li>
+            <li class="glide__slide">
+              <img
+                src="https://farm8.staticflickr.com/7283/16204329348_27dd3b5bdb_c.jpg"
+                alt="Amazing view arriving at Refugio Hielo Azul"
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            prev
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            next
+          </button>
+        </div>
+      </div>
+
+      <section>
+        <!--Gallery Section-->
+        <h2 class="red-text text-center">Spectacle</h2>
+        <div class="gallery">
+          <img
+            src="https://farm8.staticflickr.com/7419/16390210191_eb6f6f1988_c.jpg"
+            alt="Wonderful view of the lake and the Refugio Frey"
+          />
+          <img
+            src="https://farm8.staticflickr.com/7367/15769512364_c9bfde695a_c.jpg"
+            alt="Arriving at Refugio Cajon Del Azul"
+          />
+          <img
+            src="https://farm9.staticflickr.com/8577/15769507054_574970c51f_c.jpg"
+            alt="Arriving at Refugio Frey"
+          />
+          <img
+            src="https://farm8.staticflickr.com/7283/16204329348_27dd3b5bdb_c.jpg"
+            alt="Amazing view arriving at Refugio Hielo Azul"
+          />
+        </div>
+
+        <i id="contact" class="treeicon fas fa-tree fa-sm"></i>
+      </section>
+    </div>
+
+    <!--Footer Section-->
+    <footer>
+      <div class="container-fluid text-center">
+        <p>
+          If you wanna see more pictures about this trip, contact me or check my
+          stuff at
+          <a href="https://flic.kr/s/aHsk3JMbJ4" target="_blank">Flickr</a>.
+        </p>
+        <br />
+        <div>
+          Icons made by
+          <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+          is licensed by
+          <a
+            href="http://creativecommons.org/licenses/by/3.0/"
+            title="Creative Commons BY 3.0"
+            target="_blank"
+            >CC 3.0 BY</a
+          >
+        </div>
+        <p>Copyright Luiz Daniel Lima. All rights reserved</p>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+    ></script>
+    <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
