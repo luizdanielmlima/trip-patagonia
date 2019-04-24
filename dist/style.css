@@ -1,63 +1,69 @@
+*,
+*::before,
+*::after,
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
-  --primary-color: darkgreen;
-  --secondary-color: OliveDrab;
-  --tertiary-color: greenyellow;
-  --bg-color: #f4e1b7;
+  --primary-color: #3d804b;
+  --secondary-color: #e8b95d;
+  --tertiary-color: #49a8a0;
+  --bg-color: #d1c9b4;
+  --bg-color2: #544e38;
+  --font-color: #544e38;
   --dark-color: #1d1c1b;
   --secondary-font: 'Poppins', sans-serif;
   --primary-font: 'Oswald', sans-serif;
 }
 
 body {
-  font-family: 'Didact Gothic', sans-serif;
-  font-size: 18px;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: var(--primary-font);
 }
 
 /* unvisited link */
 a:link {
-  color: palegreen;
+  color: var(--primary-color);
 }
 
 /* visited link */
 a:visited {
-  color: OliveDrab;
+  color: var(--primary-color);
 }
 
 /* mouse over link */
 a:hover {
-  color: greenyellow;
+  color: white;
 }
 
 /* selected link */
 a:active {
-  color: greenyellow;
+  color: var(--primary-color);
 }
 
 .main-space {
-  margin-top: 14px;
+  margin-top: 48px;
+  color: white;
 }
 
 p {
   font-family: var(--secondary-font);
-  text-justify: auto;
+  color: var(--font-color);
 }
 
-h1 {
-  font-family: var(--primary-font);
-  font-weight: 600;
-  color: white;
-}
-
-h2 {
-  font-family: var(--primary-font);
-  font-weight: 600;
-  color: darkgreen;
-}
-
+h1,
+h2,
 h3,
 h4 {
   font-family: var(--primary-font);
-  color: black;
+  color: var(--primary-color);
+  padding: 0;
+  margin: 0;
 }
 
 .treeicon {
@@ -66,19 +72,30 @@ h4 {
 }
 
 /* Header */
+nav {
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+}
+
 .main-banner {
   padding: 0;
   margin: 0;
   position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.header-img {
+  background-image: url('./assets/trekking_illustration_s.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 600px;
 }
 
 .main-banner .title-box {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  background-color: var(--secondary-color);
 }
 
 .main-banner .box-txt {
@@ -93,51 +110,75 @@ h4 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  background-color: rgba(0, 0, 0, 0.3);
-  outline: 1px solid rgba(255, 255, 255, 0.7);
+  background-color: var(--bg-color);
+  outline: 1px solid rgba(255, 255, 255, 1);
   outline-offset: -10px;
-}
-
-.main-banner h1 {
-  margin-bottom: 20px;
-}
-
-.header-img {
-  background-image: url(https://farm8.staticflickr.com/7380/16243596697_823af9d5a4_k.jpg);
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 600px;
 }
 
 .shadow-text {
   text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px;
 }
 
+.content {
+  padding: 0px 0px;
+}
+
 section {
-  padding: 0px;
-  margin: 60px 0px;
+  padding: 40px 0;
+  margin: 0px 0px;
+  /* border: 1px solid palegreen; */
+}
+
+.section-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.quote-section {
+  background-color: var(--bg-color2);
+}
+
+.quote-section h4,
+.quote-section p {
+  color: var(--bg-color);
 }
 
 /* Section Stats */
+/* .stats-section {
+  background-color: var(--tertiary-color);
+} */
 
 .stat-item {
   text-align: center;
+  /* border: 1px solid palegreen; */
 }
 
 .stat-item img {
   max-width: 64px;
-  margin: 20px 10px;
+  margin: 20px 0px;
 }
 
 /* About */
-.about-trip {
-  padding: 16px;
+.about-content {
+  background-color: var(--secondary-color);
+  padding: 0;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: auto auto;
+  grid-gap: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-img {
+  width: 600px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  /* border: 1px solid palegreen; */
 }
 
 /* Gallery */
@@ -155,24 +196,23 @@ section {
 
 /* Footer */
 footer {
-  background-color: DarkOliveGreen;
+  background-color: var(--bg-color2);
   color: white;
   padding: 16px;
 }
 
 @media (max-width: 768px) {
+  .header-img {
+    min-height: 500px;
+  }
+
+  .content {
+    padding: 0px 40px;
+  }
+
   .gallery {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
-  }
-  .about-trip {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  h4 {
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 20px;
   }
 }
