@@ -29,8 +29,13 @@
   <body>
     <header>
       <!--NavBar-->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#"><i class="fas fa-tree fa-1x"></i></a>
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top"
+        style="background-color: #1d1c1b;"
+      >
+        <a class="navbar-brand" href="#home"
+          ><i class="fas fa-tree fa-1x"></i
+        ></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -64,20 +69,23 @@
     </header>
 
     <!--Main Image and Title-->
-    <section class="main-banner">
-      <div class="header-img" id="home"></div>
+    <section class="main-banner" id="home">
+      <div class="header-img"></div>
       <div class="title-box">
         <div class="box-txt">
-          <div class="box-main-txt">
-            <p class="text-center">An</p>
-            <h2 class="text-center">Adventure</h2>
-            <p class="text-center">in</p>
-            <h1 class="text-center">Patagonia</h1>
+          <div class="main-txt">
+            <p>An</p>
+            <h2>Adventure</h2>
+            <p>in</p>
+            <h1>Patagonia</h1>
           </div>
-          <p class="text-center">by</p>
-          <p class="text-center">Luiz Daniel Lima</p>
+          <div class="author">
+            <p class="text-center">by</p>
+            <p class="text-center">Luiz Daniel Lima</p>
+          </div>
         </div>
       </div>
+      <div class="header-img2"></div>
     </section>
 
     <div class="content">
@@ -93,32 +101,32 @@
 
       <section class="stats-section container">
         <div class="row">
-          <div class="stat-item col-lg-2 col-md-6">
+          <div class="stat-item col-lg-2 col-sm-6">
             <img src="/dist/assets/map.png" alt="map icon" />
             <h3>10 days</h3>
             <p>trekking</p>
           </div>
-          <div class="stat-item col-lg-2 col-md-6">
+          <div class="stat-item col-lg-2 col-sm-6">
             <img src="/dist/assets/mountain.png" alt="mountain icon" />
             <h3>91 km</h3>
             <p>of trails</p>
           </div>
-          <div class="stat-item col-lg-2 col-md-6">
+          <div class="stat-item col-lg-2 col-sm-6">
             <img src="/dist/assets/backpack.png" alt="backpack icon" />
             <h3>18 kg</h3>
             <p>backpack weight</p>
           </div>
-          <div class="stat-item col-lg-2 col-md-6">
+          <div class="stat-item col-lg-2 col-sm-6">
             <img src="/dist/assets/fishing.png" alt="fishing icon" />
             <h3>3</h3>
             <p>trouts fished</p>
           </div>
-          <div class="stat-item col-lg-2 col-md-6">
+          <div class="stat-item col-lg-2 col-sm-6">
             <img src="/dist/assets/camera.png" alt="camera icon" />
             <h3>754</h3>
             <p>pictures taken</p>
           </div>
-          <div class="stat-item col-lg-2 col-md-6">
+          <div class="stat-item col-lg-2 col-sm-6">
             <img src="/dist/assets/post.png" alt="post icon" />
             <h3>5</h3>
             <p>Refugios visited</p>
@@ -175,7 +183,7 @@
           />
         </div>
 
-        <i id="contact" class="treeicon fas fa-tree fa-sm"></i>
+        <!-- <i class="treeicon fas fa-tree fa-sm"></i> -->
       </section>
 
       <div class="glide">
@@ -226,9 +234,10 @@
           stuff at
           <a href="https://flic.kr/s/aHsk3JMbJ4" target="_blank">Flickr</a>.
         </p>
+        <p>Copyright Luiz Daniel Lima. All rights reserved</p>
         <br />
-        <div>
-          Icons made by
+        <div class="credits">
+          Icons and Banner Image made by
           <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from
           <a href="https://www.flaticon.com/" title="Flaticon"
             >www.flaticon.com</a
@@ -241,7 +250,6 @@
             >CC 3.0 BY</a
           >
         </div>
-        <p>Copyright Luiz Daniel Lima. All rights reserved</p>
       </div>
     </footer>
 
