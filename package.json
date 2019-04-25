@@ -2,7 +2,7 @@
   "name": "trippatagonia",
   "version": "1.0.0",
   "description": "website about my trip to patagonia",
-  "main": "index.html",
+  "main": "main.js",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
