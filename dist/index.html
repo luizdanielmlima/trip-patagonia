@@ -2,27 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Oswald:500|Poppins"
       rel="stylesheet"
     />
+
     <!-- Glide.JS stylesheet and stuff -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="../node_modules/@glidejs/glide/dist/css/glide.core.min.css"
     />
     <link
       rel="stylesheet"
       href="../node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
-    />
-    <!-- end -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css"
-      rel="stylesheet"
-    />
+    /> -->
+
+    <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
+
     <title>My Trip to Patagonia, Argentina</title>
   </head>
 
@@ -31,11 +43,11 @@
       <!--NavBar-->
       <nav
         class="navbar navbar-expand-md navbar-dark fixed-top"
-        style="background-color: #1d1c1b;"
+        style="background-color: #292929;"
       >
-        <a class="navbar-brand" href="#home"
+        <!-- <a class="navbar-brand" href="#home"
           ><i class="fas fa-tree fa-1x"></i
-        ></a>
+        ></a> -->
         <button
           class="navbar-toggler"
           type="button"
@@ -48,20 +60,20 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active mr-3">
               <a class="nav-link" href="#home"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="#stats">Stats</a>
+            </li>
+            <li class="nav-item mr-3">
               <a class="nav-link" href="#about">About</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mr-3">
               <a class="nav-link" href="#gallery">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -91,68 +103,74 @@
     <div class="content">
       <section class="quote-section">
         <h4 class="text-center">
-          "It´s human nature to stretch, to go, to see, to understand. <br />
-          Exploration is not a choice really; it´s an imperative."
+          " It´s human nature to stretch, to go, to see, to understand. <br />
+          Exploration is not a choice really; it´s an imperative. "
         </h4>
         <p class="text-center">Michael Collins</p>
       </section>
 
       <!-- <i id="about" class="treeicon fas fa-tree fa-sm"></i> -->
 
-      <section class="stats-section container">
+      <section class="stats-section container" id="stats">
         <div class="row">
           <div class="stat-item col-lg-2 col-sm-6">
-            <img src="/dist/assets/map.png" alt="map icon" />
+            <img src="/dist/assets/icons/map.png" alt="map icon" />
             <h3>10 days</h3>
             <p>trekking</p>
           </div>
           <div class="stat-item col-lg-2 col-sm-6">
-            <img src="/dist/assets/mountain.png" alt="mountain icon" />
+            <img src="/dist/assets/icons/mountain.png" alt="mountain icon" />
             <h3>91 km</h3>
             <p>of trails</p>
           </div>
           <div class="stat-item col-lg-2 col-sm-6">
-            <img src="/dist/assets/backpack.png" alt="backpack icon" />
+            <img src="/dist/assets/icons/backpack.png" alt="backpack icon" />
             <h3>18 kg</h3>
             <p>backpack weight</p>
           </div>
           <div class="stat-item col-lg-2 col-sm-6">
-            <img src="/dist/assets/fishing.png" alt="fishing icon" />
+            <img src="/dist/assets/icons/fishing.png" alt="fishing icon" />
             <h3>3</h3>
             <p>trouts fished</p>
           </div>
           <div class="stat-item col-lg-2 col-sm-6">
-            <img src="/dist/assets/camera.png" alt="camera icon" />
+            <img src="/dist/assets/icons/camera.png" alt="camera icon" />
             <h3>754</h3>
             <p>pictures taken</p>
           </div>
           <div class="stat-item col-lg-2 col-sm-6">
-            <img src="/dist/assets/post.png" alt="post icon" />
+            <img src="/dist/assets/icons/post.png" alt="post icon" />
             <h3>5</h3>
             <p>Refugios visited</p>
           </div>
         </div>
       </section>
 
-      <section class="about-content">
+      <section class="about-content" id="about">
         <img
           class="about-img"
-          src="https://farm8.staticflickr.com/7373/16365978726_a9757d4b6a_c.jpg"
+          src="/dist/assets/photos/Bariloche_Me_Eduardo2.JPG"
           alt="Trekking in the woods, El Bolson"
         />
         <div class="about-text">
           <h2 class="section-title">About the Trip</h2>
           <p>
-            In 2014 my friend Eduardo and I decided to travel to Patagonia
-            Argentina and do some trekking around Bariloche (in Parque Nahuel
-            Huapi) and El Bolsón.
+            In 2014 my friend Eduardo (red shirt) and I decided to travel to
+            Patagonia Argentina and do some trekking in
+            <span style="font-weight: 600"
+              >Parque Nahuel Huapi (next to Bariloche) and El Bolsón</span
+            >
+            .
           </p>
           <p>
             Although phisically challenging at times, it was well worth it!
-            Beautiful landscapes like no other place in the world. There is
-            something magical about being in contact with nature, away from all
-            the modern world distractions.
+            <span style="font-weight: 600"
+              >Beautiful landscapes like no other place in the world.</span
+            >
+            There is something magical about being in contact with nature, away
+            from all the modern world distractions.
           </p>
+
           <p>
             I hope one day you try it too, you won't regret it! Be sure to
             prepare yourself physically before travelling, buy some comfort
@@ -161,103 +179,237 @@
         </div>
       </section>
 
-      <section>
+      <section class="section-gallery" id="gallery">
         <!--Gallery Section-->
         <h2 class="section-title">Gallery</h2>
         <div class="gallery">
-          <img
-            src="https://farm8.staticflickr.com/7419/16390210191_eb6f6f1988_c.jpg"
-            alt="Wonderful view of the lake and the Refugio Frey"
-          />
-          <img
-            src="https://farm8.staticflickr.com/7367/15769512364_c9bfde695a_c.jpg"
-            alt="Arriving at Refugio Cajon Del Azul"
-          />
-          <img
-            src="https://farm9.staticflickr.com/8577/15769507054_574970c51f_c.jpg"
-            alt="Arriving at Refugio Frey"
-          />
-          <img
-            src="https://farm8.staticflickr.com/7283/16204329348_27dd3b5bdb_c.jpg"
-            alt="Amazing view arriving at Refugio Hielo Azul"
-          />
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">Nahuel Huapi</h4>
+              <p class="shadow-text">
+                View of the valley, before arriving at Refugio Frey
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/NahuelHuapi_Mountain_WayTo_RefugioFrey.jpg"
+              alt="photo trekking in Nahuel Huapi"
+            />
+          </figure>
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">Nahuel Huapi</h4>
+              <p class="shadow-text">
+                Arriving at Refugio Frey
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/NahuelHuapi_Arriving_RefugioFrey.jpg"
+              alt="photo trekking in Nahuel Huapi"
+            />
+          </figure>
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">Nahuel Huapi</h4>
+              <p class="shadow-text">
+                The amazing Refugio Frey and its surroundings
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/NahuelHuapi_RefugioFrey.jpg"
+              alt="photo trekking in Nahuel Huapi"
+            />
+          </figure>
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">Nahuel Huapi</h4>
+              <p class="shadow-text">
+                Climbing uphill when exiting Refugio Frey
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/NahuelHuapi_Climbing_Uphill_Exiting_RefugioFrey.jpg"
+              alt="photo trekking in Nahuel Huapi"
+            />
+          </figure>
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">Nahuel Huapi</h4>
+              <p class="shadow-text">
+                Pause for lunch and pictures, going to Refugio San Martin
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/NahuelHuapi_Me_Resting_OnTheWayTo_RefugioJackob.jpg"
+              alt="photo trekking in Nahuel Huapi"
+            />
+          </figure>
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">Nahuel Huapi</h4>
+              <p class="shadow-text">
+                Great view of Lake Jakob and Refugio San Martin
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/NahuelHuapi_LakeJakob_RefugioSanMartin.jpg"
+              alt="photo trekking in Nahuel Huapi"
+            />
+          </figure>
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">El Bolsón</h4>
+              <p class="shadow-text">
+                Beautiful view before arriving at Refugio Hielo Azul
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/ElBolson_Arriving_RefugioHieloAzul.jpg"
+              alt="photo trekking in El Bolson"
+            />
+          </figure>
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">El Bolsón</h4>
+              <p class="shadow-text">
+                Lake at Refugio Natación
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/ElBolson_Lake_RefugioNatacion.jpg"
+              alt="photo trekking in El Bolson"
+            />
+          </figure>
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">El Bolsón</h4>
+              <p class="shadow-text">
+                A small river near Refugio Natación
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/ElBolson_River_Near_RefugioNatacion.jpg"
+              alt="photo trekking in El Bolson"
+            />
+          </figure>
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">El Bolsón</h4>
+              <p class="shadow-text">
+                The amazing colors of Rio Azul
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/ElBolson_RioAzul_AmazingColors.jpg"
+              alt="photo trekking in El Bolson"
+            />
+          </figure>
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">El Bolsón</h4>
+              <p class="shadow-text">
+                Camping at Refugio La Playita
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/ElBolson_Tents_Refugio_LaPlayita.JPG"
+              alt="photo trekking in El Bolson"
+            />
+          </figure>
+          <figure>
+            <div class="img-caption">
+              <h4 class="shadow-text">El Bolsón</h4>
+              <p class="shadow-text">
+                And a well deserved beer!
+              </p>
+            </div>
+            <img
+              src="/dist/assets/photos/ElBolson_Beer_Refugio_LaTronconada.JPG"
+              alt="photo trekking in El Bolson"
+            />
+          </figure>
         </div>
-
-        <!-- <i class="treeicon fas fa-tree fa-sm"></i> -->
+        <!-- <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#galleryModal"
+        >
+          View Full Gallery
+        </button> -->
       </section>
 
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <img
-                src="https://farm8.staticflickr.com/7419/16390210191_eb6f6f1988_c.jpg"
-                alt="Wonderful view of the lake and the Refugio Frey"
-              />
-            </li>
-            <li class="glide__slide">
-              <img
-                src="https://farm8.staticflickr.com/7367/15769512364_c9bfde695a_c.jpg"
-                alt="Arriving at Refugio Cajon Del Azul"
-              />
-            </li>
-            <li class="glide__slide">
-              <img
-                src="https://farm9.staticflickr.com/8577/15769507054_574970c51f_c.jpg"
-                alt="Arriving at Refugio Frey"
-              />
-            </li>
-            <li class="glide__slide">
-              <img
-                src="https://farm8.staticflickr.com/7283/16204329348_27dd3b5bdb_c.jpg"
-                alt="Amazing view arriving at Refugio Hielo Azul"
-              />
-            </li>
-          </ul>
+      <!--Footer Section-->
+      <footer>
+        <div class="container-fluid text-center">
+          <p>
+            If you wanna see more pictures about this trip, check my
+            <a href="https://flic.kr/s/aHsk3JMbJ4" target="_blank">Flickr</a>
+            album.
+          </p>
+          <p>Thank for visiting this page!</p>
+          <br />
+          <div class="credits">
+            Icons and Banner Image made by
+            <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+            is licensed by
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              title="Creative Commons BY 3.0"
+              target="_blank"
+              >CC 3.0 BY</a
+            >
+          </div>
         </div>
-        <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-            prev
-          </button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-            next
-          </button>
+      </footer>
+    </div>
+
+    <!-- GALLERY MODAL -->
+    <div
+      class="modal fade"
+      id="galleryModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="galleryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog  modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"></div>
         </div>
       </div>
     </div>
-
-    <!--Footer Section-->
-    <footer>
-      <div class="container-fluid text-center">
-        <p>
-          If you wanna see more pictures about this trip, contact me or check my
-          stuff at
-          <a href="https://flic.kr/s/aHsk3JMbJ4" target="_blank">Flickr</a>.
-        </p>
-        <p>Copyright Luiz Daniel Lima. All rights reserved</p>
-        <br />
-        <div class="credits">
-          Icons and Banner Image made by
-          <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from
-          <a href="https://www.flaticon.com/" title="Flaticon"
-            >www.flaticon.com</a
-          >
-          is licensed by
-          <a
-            href="http://creativecommons.org/licenses/by/3.0/"
-            title="Creative Commons BY 3.0"
-            target="_blank"
-            >CC 3.0 BY</a
-          >
-        </div>
-      </div>
-    </footer>
+    <!-- GALLERY MODAL -->
 
     <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
     ></script>
-    <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script> -->
     <script src="./main.js"></script>
   </body>
 </html>
