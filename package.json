@@ -4,11 +4,13 @@
   "description": "website about my trip to patagonia",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
+  "homepage": "https://luizdanielmlima.github.io/trippatagonia",
   "dependencies": {
-    "@glidejs/glide": "^3.3.0"
+    "@glidejs/glide": "^3.3.0",
+    "gh-pages": "^2.0.1"
   }
 }
