@@ -221,7 +221,7 @@ section {
 
 /* LOCATION */
 .location-content {
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
   padding: 0;
   display: grid;
   grid-gap: 0;
@@ -233,6 +233,10 @@ section {
   color: var(--secondary-color);
 }
 
+.location-content p {
+  color: var(--bg-color);
+}
+
 .location-content a {
   margin-top: 20px;
   text-align: center;
@@ -240,6 +244,10 @@ section {
 
 .location-content #map {
   height: 100%;
+}
+
+.location-content .map-window p {
+  color: var(--dark-color);
 }
 
 /* GALLERY */
@@ -382,7 +390,7 @@ footer .credits {
   }
 
   .location-content {
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     padding: 0;
     display: grid;
     grid-gap: 0;

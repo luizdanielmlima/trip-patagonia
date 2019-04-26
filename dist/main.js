@@ -16,7 +16,7 @@ function initMap() {
     '<div id="content">' +
     '<h4 id="firstHeading" class="firstHeading">Bariloche</h4>' +
     '<div id="bodyContent">' +
-    '<p>Located in Argentina´s Río Negro province and 1,680 kilometers from Buenos Aires. Bariloche is one of the most breathtaking places in Argentina. It´s quintessentially Patagonian.</p>' +
+    '<p>The city is located 1,680 kilometers from Buenos Aires, approximately 2h and 30min by plane.</p>' +
     '</div>' +
     '</div>';
 
@@ -24,7 +24,7 @@ function initMap() {
     '<div id="content">' +
     '<h4 id="firstHeading" class="firstHeading">El Bolsón</h4>' +
     '<div id="bodyContent">' +
-    '<p>The city is located 129 kilometers (80 miles) from Bariloche, heading south on National Route 40. There are many trails around the city, with beautiful mountains, glaciers and rivers.</p>' +
+    '<p>The city is located 129 kilometers (80 miles) south of Bariloche through Route 40, approximately 2h by bus.</p>' +
     '</div>' +
     '</div>';
 
