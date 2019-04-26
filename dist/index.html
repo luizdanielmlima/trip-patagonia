@@ -33,7 +33,7 @@
     /> -->
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
     <title>My Trip to Patagonia, Argentina</title>
   </head>
@@ -67,10 +67,13 @@
               >
             </li>
             <li class="nav-item mr-3">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item mr-3">
               <a class="nav-link" href="#stats">Stats</a>
             </li>
             <li class="nav-item mr-3">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#place">Map</a>
             </li>
             <li class="nav-item mr-3">
               <a class="nav-link" href="#gallery">Gallery</a>
@@ -109,7 +112,38 @@
         <p class="text-center">Michael Collins</p>
       </section>
 
-      <!-- <i id="about" class="treeicon fas fa-tree fa-sm"></i> -->
+      <section class="about-content" id="about">
+        <img
+          class="about-img"
+          src="./assets/photos/Bariloche_Me_Eduardo2.JPG"
+          alt="Trekking in the woods, El Bolson"
+        />
+        <div class="about-text">
+          <h2 class="section-title">About the Trip</h2>
+          <p>
+            In 2014 my friend Eduardo (red shirt) and I decided to travel to
+            Patagonia Argentina and do some trekking in
+            <span style="font-weight: 600"
+              >Parque Nahuel Huapi (next to Bariloche) and El Bolsón</span
+            >
+            .
+          </p>
+          <p>
+            Although phisically challenging at times, it was well worth it!
+            <span style="font-weight: 600"
+              >Beautiful landscapes like no other place in the world.</span
+            >
+            There is something magical about being in contact with nature, away
+            from all the modern world distractions.
+          </p>
+
+          <p>
+            I hope one day you try it too, you won't regret it! Be sure to
+            prepare yourself physically before travelling, buy some comfort
+            boots, and head on for this unforgettable adventure!
+          </p>
+        </div>
+      </section>
 
       <section class="stats-section container" id="stats">
         <div class="row">
@@ -146,36 +180,44 @@
         </div>
       </section>
 
-      <section class="about-content" id="about">
-        <img
-          class="about-img"
-          src="./assets/photos/Bariloche_Me_Eduardo2.JPG"
-          alt="Trekking in the woods, El Bolson"
-        />
+      <section class="location-content" id="place">
         <div class="about-text">
-          <h2 class="section-title">About the Trip</h2>
+          <h2 class="section-title">Bariloche</h2>
           <p>
-            In 2014 my friend Eduardo (red shirt) and I decided to travel to
-            Patagonia Argentina and do some trekking in
-            <span style="font-weight: 600"
-              >Parque Nahuel Huapi (next to Bariloche) and El Bolsón</span
-            >
-            .
+            Located in Argentina's Río Negro province and 1,680 kilometers (1044
+            miles) from Buenos Aires. Bariloche is one of the most breathtaking
+            places in Argentina. It's quintessentially Patagonian.
           </p>
           <p>
-            Although phisically challenging at times, it was well worth it!
-            <span style="font-weight: 600"
-              >Beautiful landscapes like no other place in the world.</span
-            >
-            There is something magical about being in contact with nature, away
-            from all the modern world distractions.
+            The city is located within the
+            <span style="font-weight: 600">Nahuel Huapi National Park</span>,
+            next to the Andes. There you'll find incredible views, crystal clear
+            lakes, meltwater rivers and mountains covered in snow.
           </p>
-
+          <a
+            href="https://www.barilocheturismo.gob.ar/en/about-bariloche"
+            target="_blank"
+            >MORE INFO</a
+          >
+        </div>
+        <div id="map"></div>
+        <div class="about-text">
+          <h2 class="section-title">El Bolsón</h2>
           <p>
-            I hope one day you try it too, you won't regret it! Be sure to
-            prepare yourself physically before travelling, buy some comfort
-            boots, and head on for this unforgettable adventure!
+            The city is located 129 kilometers (80 miles) from Bariloche,
+            heading south on National Route 40. There are many trails around the
+            city, with beautiful mountains, glaciers and rivers.
           </p>
+          <p>
+            The town is truly unique and its people are warm and welcoming. One
+            of the town's most popular attractions is the craft fair at Pagano
+            square in downtown El Bolsón.
+          </p>
+          <a
+            href="https://www.welcomeargentina.com/elbolson/outings.html"
+            target="_blank"
+            >MORE INFO</a
+          >
         </div>
       </section>
 
@@ -410,6 +452,11 @@
       crossorigin="anonymous"
     ></script>
     <!-- <script src="../node_modules/@glidejs/glide./glide.min.js"></script> -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJsK4SvSM7oA8M9MV16xX4FoC_a9N1ufM&callback=initMap"
+      async
+      defer
+    ></script>
     <script src="./main.js"></script>
   </body>
 </html>
