@@ -383,17 +383,10 @@ footer .credits {
   }
 
   .about-content {
-    background-color: var(--secondary-color);
-    padding: 0;
-    display: grid;
     grid-template-columns: 1fr;
   }
 
   .location-content {
-    background-color: var(--secondary-color);
-    padding: 0;
-    display: grid;
-    grid-gap: 0;
     grid-template-columns: 1fr;
   }
 
@@ -402,9 +395,6 @@ footer .credits {
   }
 
   .gallery {
-    padding: 0 40px;
-    display: grid;
-    grid-gap: 20px;
     grid-template-columns: 1fr;
   }
 }
