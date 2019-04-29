@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Google Fonts -->
+        <link
+        href="https://fonts.googleapis.com/css?family=Oswald:500|Poppins"
+        rel="stylesheet"
+      />
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="map.css" />
+    <title>Interactive Map</title>
+  </head>
+  <body class="map-page-body">
+    <header>
+      <div class="back-btn">
+        <a href="./index.html">Home</a>
+      </div>
+      <div class="header-text">
+        <h1>Interactive Map and Photo Gallery</h1>
+        <h4>From Bariloche to Refugio Frey and then to Refugio San Martin</h1>
+      </div>
+    </header>
+    <section>
+      <div class="map-photo-container">
+        <div id="map"></div>
+        <figure>
+          <div class="img-caption">
+            <h4 id="caption" class="shadow-text">Starting the trekking, at Cerro Cathedral</h4>
+          </div>
+          <img
+          id="photo"
+            src="/dist/assets/map-photos/IMG_1644.JPG"
+            alt="photo of trekking"
+          />
+        </figure>
+      </div>
+    </section>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJsK4SvSM7oA8M9MV16xX4FoC_a9N1ufM&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="./map.js"></script>
+  </body>
+</html>

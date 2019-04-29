@@ -292,7 +292,7 @@ section {
   transition: opacity 0.4s;
 }
 
-.img-caption h4 {
+.gallery figure .img-caption h4 {
   color: var(--secondary-color);
   opacity: 0;
   -webkit-transform: translate3d(0, -5px, 0);
@@ -301,7 +301,7 @@ section {
   transition: opacity 0.25s, transform 0.25s;
 }
 
-.img-caption p {
+.gallery .img-caption p {
   font-size: 0.8em;
   margin-top: 0.2em;
   color: var(--bg-color);
