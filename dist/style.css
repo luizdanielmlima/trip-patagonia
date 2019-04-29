@@ -21,6 +21,7 @@ html {
 }
 
 body {
+  position: relative;
   background-color: var(--bg-color);
   color: var(--font-color);
   font-family: var(--primary-font);

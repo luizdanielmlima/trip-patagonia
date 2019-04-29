@@ -1,3 +1,10 @@
+// Activate scrollspy to add active class to navbar items on scroll
+$('body').scrollspy({
+  target: '#mainNav',
+  offset: 56
+});
+
+//GOOGLE MAPS STUFF
 var map;
 function initMap() {
   var bariloche = { lat: -41.128268, lng: -71.480001 };
