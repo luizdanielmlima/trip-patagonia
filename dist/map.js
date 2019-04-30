@@ -17,7 +17,11 @@ function initMap() {
   var options = {
     center: mapCenter,
     zoom: 13,
-    mapTypeId: 'satellite'
+    mapTypeId: 'satellite',
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+      mapTypeIds: ['roadmap', 'satellite']
+    }
   };
 
   // Array of markers
