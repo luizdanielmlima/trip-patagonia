@@ -66,35 +66,35 @@ function initMap() {
       title: 'Arriving at Refugio Frey',
       coords: { lat: -41.19913971934484, lng: -71.48514905966624 },
       lookAt: { lat: -41.19839703203824, lng: -71.48720899618968 },
-      image: photosPath + 'IMG_1723.jpg'
+      image: photosPath + 'IMG_1723.JPG'
     },
     {
       id: 7,
       title: 'Camping at Refugio Frey',
       coords: { lat: -41.1979262186466, lng: -71.48640822325791 },
       lookAt: { lat: -41.19838088656841, lng: -71.48896852530345 },
-      image: photosPath + 'IMG_1732.jpg'
+      image: photosPath + 'IMG_1732.JPG'
     },
     {
       id: 8,
       title: 'Refugio Frey, view from across the lake',
       coords: { lat: -41.19919226818601, lng: -71.48869077312025 },
       lookAt: { lat: -41.198445468423806, lng: -71.4867798427473 },
-      image: photosPath + 'IMG_1766.jpg'
+      image: photosPath + 'IMG_1766.JPG'
     },
     {
       id: 9,
       title: 'Leaving Refugio Frey, going to Refugio San Martin',
       coords: { lat: -41.197786316664505, lng: -71.49975397910941 },
       lookAt: { lat: -41.19467806154918, lng: -71.5030589789227 },
-      image: photosPath + 'IMG_1776.jpg'
+      image: photosPath + 'IMG_1776.JPG'
     },
     {
       id: 10,
       title: 'Valley on the way to San Martin',
       coords: { lat: -41.18640296552895, lng: -71.50583097003982 },
       lookAt: { lat: -41.18510520708436, lng: -71.51188194959934 },
-      image: photosPath + 'IMG_1807.jpg'
+      image: photosPath + 'IMG_1807.JPG'
     },
     {
       id: 11,
@@ -108,28 +108,28 @@ function initMap() {
       title: 'In the woods, after the descent',
       coords: { lat: -41.18658423084287, lng: -71.51199956334227 },
       lookAt: { lat: -41.18725967186077, lng: -71.51513425459132 },
-      image: photosPath + 'IMG_1818.jpg'
+      image: photosPath + 'IMG_1818.JPG'
     },
     {
       id: 13,
       title: 'Camping, midway to Refugio San Martin',
       coords: { lat: -41.18760462811332, lng: -71.51842316285268 },
       lookAt: { lat: -41.18890676905813, lng: -71.52058035295784 },
-      image: photosPath + 'IMG_1832.jpg'
+      image: photosPath + 'IMG_1832.JPG'
     },
     {
       id: 14,
       title: 'Going uphill again, leaving the valley',
       coords: { lat: -41.18379289707056, lng: -71.5391211482521 },
       lookAt: { lat: -41.18469971067734, lng: -71.53200155427595 },
-      image: photosPath + 'IMG_1847.jpg'
+      image: photosPath + 'IMG_1847.JPG'
     },
     {
       id: 15,
       title: 'In the snow, almost finishing climbing the hill, ',
       coords: { lat: -41.18179528422565, lng: -71.5437318857418 },
       lookAt: { lat: -41.18247732394025, lng: -71.53869632470156 },
-      image: photosPath + 'IMG_1848.jpg'
+      image: photosPath + 'IMG_1848.JPG'
     },
     {
       id: 16,
@@ -143,7 +143,7 @@ function initMap() {
       title: 'Arriving at Refugio San Martin',
       coords: { lat: -41.18700531853348, lng: -71.55921642843975 },
       lookAt: { lat: -41.18630915216112, lng: -71.56272088522701 },
-      image: photosPath + 'IMG_1862.jpg'
+      image: photosPath + 'IMG_1862.JPG'
     }
   ];
 
