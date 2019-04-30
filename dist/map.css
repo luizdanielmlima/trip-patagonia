@@ -132,6 +132,11 @@ figure img {
   object-fit: cover;
 }
 
+figure img .loading {
+  background: transparent url(./assets/icons/loader_a.gif) no-repeat scroll
+    center center;
+}
+
 figure .img-caption {
   position: absolute;
   text-align: center;
