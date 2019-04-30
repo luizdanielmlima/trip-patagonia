@@ -24,7 +24,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  background-color: var(--bg-color);
+  background-color: var(--dark-color);
   color: var(--font-color);
   font-family: var(--primary-font);
 }
@@ -50,7 +50,7 @@ a:active {
 }
 
 header {
-  height: 12vh;
+  height: 100px;
   display: flex;
   align-items: center;
   padding: 0;
@@ -58,14 +58,18 @@ header {
 }
 
 header .back-btn {
-  height: 40px;
+  height: 48px;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
   padding: 0px 20px;
-  text-transform: uppercase;
-  background-color: var(--dark-color);
+  opacity: 0.8;
+  background-color: var(--primary-color);
+}
+
+header .back-btn img {
+  height: 36px;
 }
 
 .header-text {
@@ -106,7 +110,7 @@ header .back-btn {
 /* PHOTO AREA */
 figure {
   position: relative;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   padding: 0;
   margin: 0;
   width: 100%;
@@ -139,4 +143,31 @@ figure .img-caption h4 {
   color: var(--secondary-color);
 }
 
-/* end of MAP PAGE */
+@media (max-width: 768px) and (orientation: portrait) {
+  .header-text h1 {
+    font-size: 24px;
+    font-family: var(--primary-font);
+  }
+
+  .header-text h4 {
+    font-size: 12px;
+    font-family: var(--primary-font);
+  }
+
+  .map-photo-container {
+    height: 40vh;
+    grid-template-columns: 1fr;
+  }
+
+  figure {
+    height: 40vh;
+  }
+
+  #map {
+    height: 220px;
+  }
+
+  figure .img-caption h4 {
+    font-size: 12px;
+  }
+}
