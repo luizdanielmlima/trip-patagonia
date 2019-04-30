@@ -11,10 +11,9 @@ var inactiveIcon = '/dist/assets/icons/camera_orange_s.png';
 var activeIcon = '/dist/assets/icons/camera_blue_s.png';
 
 function initMap() {
-  var mapCenter = { lat: -41.18920753941348, lng: -71.48747573438294 };
-  // var mapCenterTest = { lat: -41.170097830855, lng: -71.4428641650207 };
+  // Map and Markes Variables
   var iconOffset = new google.maps.Point(18, 18);
-  // Map Options
+  var mapCenter = { lat: -41.18503032216625, lng: -71.47591652642285 };
   var options = {
     center: mapCenter,
     zoom: 13,
@@ -131,8 +130,8 @@ function initMap() {
     {
       id: 16,
       title: 'Beautiful view of Laguna Honda and Cerro Tronador',
-      coords: { lat: -41.18224256801908, lng: -71.5446143123146 },
-      lookAt: { lat: -41.18327317332182, lng: -71.55156289572506 },
+      coords: { lat: -41.18222842302044, lng: -71.54595048329963 },
+      lookAt: { lat: -41.18322960534709, lng: -71.55436163755337 },
       image: photosPath + 'IMG_1858.jpg'
     },
     {
@@ -148,15 +147,18 @@ function initMap() {
   newMap = new google.maps.Map(document.getElementById('map'), options);
 
   // Listen for clicks on map - USED ONLY FOR GETTING COORDS!
-  // newMap.addListener('click', function(event) {
-  //   var markerRef = new google.maps.Marker({
-  //     position: event.latLng,
-  //     map: newMap
-  //   });
-  //   var latitude = event.latLng.lat();
-  //   var longitude = event.latLng.lng();
-  //   console.log(`lat: ${latitude}, lng: ${longitude}`);
-  // });
+  var testCoords = false;
+  if (testCoords) {
+    newMap.addListener('click', function(event) {
+      var markerRef = new google.maps.Marker({
+        position: event.latLng,
+        map: newMap
+      });
+      var latitude = event.latLng.lat();
+      var longitude = event.latLng.lng();
+      console.log(`lat: ${latitude}, lng: ${longitude}`);
+    });
+  }
 
   // loop through markers
   for (var i = 0; i < markers.length; i++) {
@@ -178,13 +180,22 @@ function initMap() {
     //draws an arrow showing the direction the pic was taken
     drawLineOfSight(props.coords, props.lookAt);
 
+    //makes the first marker active
+    if (props.id === 1) {
+      activateMarker(marker);
+    }
+
     //store the marker object drawn in global array
     markersArray.push(marker);
 
     marker.addListener('click', function(event) {
+      // Centers and zoom in on the marker
+      newMap.panTo(marker.getPosition());
+      // newMap.setZoom(14);
+
+      // Changes photo accordingly
       photo.src = props.image;
       caption.innerText = props.title;
-      //drawLineOfSight(props.coords, props.lookAt);
 
       //first, set the previous clicked marker to default icon
       markersArray[currentMarkerIndex].setIcon({
@@ -198,13 +209,17 @@ function initMap() {
       //updates the current Marker
       currentMarkerIndex = +marker.title - 1;
 
-      //then set the clicked marker to active icon
+      //then set the clicked marker to active icon and arrow visible
+      activateMarker(marker);
+    });
+
+    function activateMarker(whichMarker) {
       marker.setIcon({
         url: activeIcon,
         anchor: iconOffset
       });
       arrowsArray[currentMarkerIndex].setVisible(true);
-    });
+    }
 
     function drawLineOfSight(origin, lookAt) {
       var arrowSymbol = {
