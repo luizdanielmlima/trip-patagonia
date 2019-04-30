@@ -1,14 +1,14 @@
 var photo = document.getElementById('photo');
 var caption = document.getElementById('caption');
-var photosPath = './dist/assets/map-photos/';
+var photosPath = './assets/map-photos/';
 
 //GOOGLE MAPS STUFF
 var newMap;
 var currentMarkerIndex = 0;
 var markersArray = [];
 var arrowsArray = [];
-var inactiveIcon = './dist/assets/icons/camera_orange_s.png';
-var activeIcon = './dist/assets/icons/camera_blue_s.png';
+var inactiveIcon = './assets/icons/camera_orange_s.png';
+var activeIcon = './assets/icons/camera_blue_s.png';
 
 function initMap() {
   // Map and Markes Variables
