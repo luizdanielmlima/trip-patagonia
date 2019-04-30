@@ -4,9 +4,9 @@ var photosPath = '/dist/assets/map-photos/';
 
 //GOOGLE MAPS STUFF
 var newMap;
-var count = 0;
 var currentMarkerIndex = 0;
 var markersArray = [];
+var arrowsArray = [];
 var inactiveIcon = '/dist/assets/icons/camera_orange_s.png';
 var activeIcon = '/dist/assets/icons/camera_blue_s.png';
 
@@ -104,21 +104,21 @@ function initMap() {
       id: 12,
       title: 'In the woods, after the descent',
       coords: { lat: -41.18658423084287, lng: -71.51199956334227 },
-      lookAt: { lat: -41.18717221396999, lng: -71.51432812422092 },
+      lookAt: { lat: -41.18725967186077, lng: -71.51513425459132 },
       image: photosPath + 'IMG_1818.jpg'
     },
     {
       id: 13,
       title: 'Camping, midway to Refugio San Martin',
       coords: { lat: -41.18760462811332, lng: -71.51842316285268 },
-      lookAt: { lat: -41.18901308704305, lng: -71.51977837293919 },
+      lookAt: { lat: -41.18890676905813, lng: -71.52058035295784 },
       image: photosPath + 'IMG_1832.jpg'
     },
     {
       id: 14,
       title: 'Going uphill again, leaving the valley',
       coords: { lat: -41.18379289707056, lng: -71.5391211482521 },
-      lookAt: { lat: -41.18399534940249, lng: -71.53543475853945 },
+      lookAt: { lat: -41.18469971067734, lng: -71.53200155427595 },
       image: photosPath + 'IMG_1847.jpg'
     },
     {
@@ -147,7 +147,7 @@ function initMap() {
   // New Map
   newMap = new google.maps.Map(document.getElementById('map'), options);
 
-  // Listen for clicks on map - USE ONLY FOR GETTING COORDS!
+  // Listen for clicks on map - USED ONLY FOR GETTING COORDS!
   // newMap.addListener('click', function(event) {
   //   var markerRef = new google.maps.Marker({
   //     position: event.latLng,
@@ -175,7 +175,8 @@ function initMap() {
       }
     });
 
-    count++;
+    //draws an arrow showing the direction the pic was taken
+    drawLineOfSight(props.coords, props.lookAt);
 
     //store the marker object drawn in global array
     markersArray.push(marker);
@@ -183,13 +184,18 @@ function initMap() {
     marker.addListener('click', function(event) {
       photo.src = props.image;
       caption.innerText = props.title;
-      drawLineOfSight(props.coords, props.lookAt);
+      //drawLineOfSight(props.coords, props.lookAt);
 
       //first, set the previous clicked marker to default icon
       markersArray[currentMarkerIndex].setIcon({
         url: inactiveIcon,
         anchor: iconOffset
       });
+
+      //first, set the previous clicked marker ARROW to invisible
+      arrowsArray[currentMarkerIndex].setVisible(false);
+
+      //updates the current Marker
       currentMarkerIndex = +marker.title - 1;
 
       //then set the clicked marker to active icon
@@ -197,6 +203,7 @@ function initMap() {
         url: activeIcon,
         anchor: iconOffset
       });
+      arrowsArray[currentMarkerIndex].setVisible(true);
     });
 
     function drawLineOfSight(origin, lookAt) {
@@ -216,6 +223,7 @@ function initMap() {
         strokeColor: '#FF0000',
         strokeOpacity: 1.0,
         strokeWeight: 2,
+        visible: false,
         icons: [
           {
             icon: lineSymbol,
@@ -224,6 +232,9 @@ function initMap() {
         ],
         map: newMap
       });
+
+      //store the arrow object drawn in global array
+      arrowsArray.push(line);
     }
   }
 }
