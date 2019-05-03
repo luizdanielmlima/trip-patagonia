@@ -91,60 +91,94 @@ function initMap() {
     },
     {
       id: 10,
+      title: 'View of the small Laguna Schmidt, still frozen from the winter',
+      coords: { lat: -41.19242010103497, lng: -71.50370833362183 },
+      lookAt: { lat: -41.194970810662475, lng: -71.49704198133884 },
+      image: photosPath + 'IMG_1791.jpg'
+    },
+    {
+      id: 11,
       title: 'Valley on the way to San Martin',
       coords: { lat: -41.18640296552895, lng: -71.50583097003982 },
       lookAt: { lat: -41.18510520708436, lng: -71.51188194959934 },
       image: photosPath + 'IMG_1807.JPG'
     },
     {
-      id: 11,
+      id: 12,
       title: 'Trying to descend the hill...',
       coords: { lat: -41.18609977760806, lng: -71.50873799718016 },
       lookAt: { lat: -41.18529899175169, lng: -71.50123894422825 },
       image: photosPath + 'IMG_1812.jpg'
     },
     {
-      id: 12,
+      id: 13,
       title: 'In the woods, after the descent',
       coords: { lat: -41.18658423084287, lng: -71.51199956334227 },
       lookAt: { lat: -41.18725967186077, lng: -71.51513425459132 },
       image: photosPath + 'IMG_1818.JPG'
     },
     {
-      id: 13,
+      id: 14,
       title: 'Camping, midway to Refugio San Martin',
       coords: { lat: -41.18760462811332, lng: -71.51842316285268 },
       lookAt: { lat: -41.18890676905813, lng: -71.52058035295784 },
       image: photosPath + 'IMG_1832.JPG'
     },
     {
-      id: 14,
+      id: 15,
       title: 'Going uphill again, leaving the valley',
       coords: { lat: -41.18379289707056, lng: -71.5391211482521 },
       lookAt: { lat: -41.18469971067734, lng: -71.53200155427595 },
       image: photosPath + 'IMG_1847.JPG'
     },
     {
-      id: 15,
+      id: 16,
       title: 'In the snow, almost finishing climbing the hill, ',
       coords: { lat: -41.18179528422565, lng: -71.5437318857418 },
       lookAt: { lat: -41.18247732394025, lng: -71.53869632470156 },
       image: photosPath + 'IMG_1848.JPG'
     },
     {
-      id: 16,
+      id: 17,
       title: 'Beautiful view of Laguna Honda and Cerro Tronador',
       coords: { lat: -41.18222842302044, lng: -71.54595048329963 },
       lookAt: { lat: -41.18322960534709, lng: -71.55436163755337 },
       image: photosPath + 'IMG_1858.jpg'
     },
     {
-      id: 17,
+      id: 18,
       title: 'Arriving at Refugio San Martin',
       coords: { lat: -41.18700531853348, lng: -71.55921642843975 },
       lookAt: { lat: -41.18630915216112, lng: -71.56272088522701 },
       image: photosPath + 'IMG_1862.JPG'
     }
+  ];
+
+  //Points for the trekking path
+  var trekkingPathPoints = [
+    markers[0].coords,
+    markers[1].coords,
+    markers[2].coords,
+    { lat: -41.204016685676834, lng: -71.43723482090417 },
+    { lat: -41.20814944003703, lng: -71.43963808018151 },
+    { lat: -41.210224014209444, lng: -71.4433647600896 },
+    markers[3].coords,
+    markers[4].coords,
+    markers[5].coords,
+    markers[6].coords,
+    { lat: -41.19904268749664, lng: -71.48690913822327 },
+    markers[7].coords,
+    markers[8].coords,
+    markers[9].coords,
+    markers[10].coords,
+    markers[11].coords,
+    markers[12].coords,
+    markers[13].coords,
+    { lat: -41.187172127547704, lng: -71.52457981846067 },
+    markers[14].coords,
+    markers[15].coords,
+    markers[16].coords,
+    markers[17].coords
   ];
 
   // New Map
@@ -160,13 +194,39 @@ function initMap() {
       });
       var latitude = event.latLng.lat();
       var longitude = event.latLng.lng();
-      console.log(`lat: ${latitude}, lng: ${longitude}`);
+      console.log(`{ lat: ${latitude}, lng: ${longitude} },`);
     });
   }
 
   // loop through markers
   for (var i = 0; i < markers.length; i++) {
     addMarker(markers[i]);
+  }
+
+  drawTrekkingPath();
+
+  function drawTrekkingPath() {
+    // Define a symbol using SVG path notation, with an opacity of 1.
+    var lineSymbol = {
+      path: 'M 0,-1 0,1',
+      strokeOpacity: 1,
+      scale: 2
+    };
+
+    // Creates the polyline adding the symbol to achieve the dashed effect
+    var line = new google.maps.Polyline({
+      path: trekkingPathPoints,
+      strokeOpacity: 0,
+      strokeColor: '#ddd',
+      icons: [
+        {
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '10px'
+        }
+      ],
+      map: newMap
+    });
   }
 
   // Add Marker Function
